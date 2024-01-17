@@ -1,0 +1,7 @@
+<ul class="list-group">
+    <li class="list-group-item">
+        {% for category in product.categories.all %}
+        <li class="list-group-item"><a href="{{ category.get_absolute_url }}">{{category.title}}</a></li>
+        {% endfor %}
+    </li>
+</ul>

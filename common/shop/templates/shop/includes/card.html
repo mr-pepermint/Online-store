@@ -1,0 +1,10 @@
+<div class="card col-lg-4 col-md-6 col-sm-12">
+    {% include "shop/includes/images.html" %}
+    <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">{{product.info|truncatewords:15}}</p>
+        <p class="card-text">Price: $<span>{{product.price}}</span></p>
+        <a href="{{ product.get_absolute_url }}" class="btn btn-primary">Read more</a>
+        {% include "shop/includes/categories.html" %}
+    </div>
+</div>
